@@ -1,40 +1,78 @@
 import { Button, ButtonGroup } from "@chakra-ui/button";
-import { Box, Divider, Heading, HStack, Text } from "@chakra-ui/layout";
+import {
+  AspectRatio,
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Text,
+  VStack,
+} from "@chakra-ui/layout";
+import Image from "next/image";
 import React from "react";
 
 const Dashboard = () => {
   return (
-    <Box>
+    <Box width="full">
       <Text color="gray.500">Account Details</Text>
-      <Heading mt="1rem">Welcome!</Heading>
-      <HStack mt="1.5rem">
-        <Text color="#4E63D2">SETUP</Text>
-        <Divider bg="#4E63D2" />
+      <Flex justifyContent="space-between" alignItems="center">
+        <Heading>Welcome!</Heading>
+        <Image
+          src="/logo.png"
+          width={35}
+          height={35}
+          objectFit="contain"
+          quality={100}
+        />
+      </Flex>
+      <HStack mt="1rem">
+        <Text color="indigo.DEFAULT" fontWeight="600">
+          SETUP
+        </Text>
+        <Box width="full" height="1px" bgColor="indigo.DEFAULT"></Box>
       </HStack>
-      <Box width="80%" mt="1rem" p="1.25rem" boxShadow="base">
-        <Text mt="1.5rem">Allow permission for bluetooth and GPS tracking</Text>
-        <Box borderRadius="50%" bg="#4E63D2" width="1.5rem" height="1.5rem">
-          <Text color="white">1</Text>
+      <VStack spacing="1rem" mt="1rem">
+        <Box p="1.25rem" width="full" boxShadow="base">
+          <Flex alignItems="center" justifyContent="space-between">
+            <Text fontWeight="600">Allow permission for bluetooth and GPS tracking</Text>
+            <AspectRatio
+              ratio={1}
+              width="1.5rem"
+              bgColor="indigo.DEFAULT"
+              borderRadius="50%"
+              color="white"
+            >
+              <div>1</div>
+            </AspectRatio>
+          </Flex>
+          <ButtonGroup mt="1rem">
+            <Button>Allow</Button>
+            <Button colorScheme="white" color="gray.500">
+              Remind me later
+            </Button>
+          </ButtonGroup>
         </Box>
-        <ButtonGroup>
-          <Button bg="#4E63D2" color="white">
-            Allow
-          </Button>
-          <Button>Remind me later</Button>
-        </ButtonGroup>
-      </Box>
-      <Box width="80%" mt="1rem" p="1.25rem" boxShadow="base">
-        <Text mt="1.5rem">Add quick sign-in method</Text>
-        <Box borderRadius="50%" bg="#4E63D2" width="1.5rem" height="1.5rem">
-          <Text color="white">2</Text>
+        <Box p="1.25rem" width="full" boxShadow="base">
+          <Flex alignItems="center" justifyContent="space-between">
+            <Text fontWeight="600">Add quick sign-in method</Text>
+            <AspectRatio
+              ratio={1}
+              width="1.5rem"
+              bgColor="indigo.DEFAULT"
+              borderRadius="50%"
+              color="white"
+            >
+              <div>2</div>
+            </AspectRatio>
+          </Flex>
+          <ButtonGroup mt="1rem">
+            <Button>Add PIN</Button>
+            <Button colorScheme="white" color="gray.500">
+              Remind me later
+            </Button>
+          </ButtonGroup>
         </Box>
-        <ButtonGroup>
-          <Button bg="#4E63D2" color="white">
-            Add PIN
-          </Button>
-          <Button>Remind me later</Button>
-        </ButtonGroup>
-      </Box>
+      </VStack>
     </Box>
   );
 };
