@@ -68,10 +68,15 @@ const Dashboard = () => {
               </AspectRatio>
             </Flex>
 
-            <Collapse in={!isVerified} startingHeight={0}>
+            <Collapse
+              in={!isVerified}
+              endingHeight="3.5rem"
+              startingHeight={0}
+              unmountOnExit
+            >
               <ButtonGroup mt="1rem">
                 <Button
-                  width="full"
+                  width="auto"
                   onClick={() => {
                     setModalContent("verify");
                     onOpen();
@@ -79,7 +84,7 @@ const Dashboard = () => {
                 >
                   Verify
                 </Button>
-                <Button width="full" colorScheme="white" color="gray.500">
+                <Button width="auto" colorScheme="white" color="gray.500">
                   Learn More
                 </Button>
               </ButtonGroup>
@@ -98,10 +103,15 @@ const Dashboard = () => {
                 {isRegistered ? <div>&#10003;</div> : <div>2</div>}
               </AspectRatio>
             </Flex>
-            <Collapse in={!isRegistered} startingHeight={0}>
+            <Collapse
+              in={!isRegistered}
+              endingHeight="3.5rem"
+              startingHeight={0}
+              unmountOnExit
+            >
               <ButtonGroup mt="1rem">
                 <Button
-                  width="full"
+                  width="auto"
                   onClick={() => {
                     setModalContent("register");
                     onOpen();
@@ -109,7 +119,7 @@ const Dashboard = () => {
                 >
                   Register
                 </Button>
-                <Button width="full" colorScheme="white" color="gray.500">
+                <Button width="auto" colorScheme="white" color="gray.500">
                   Learn More
                 </Button>
               </ButtonGroup>

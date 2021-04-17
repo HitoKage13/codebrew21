@@ -68,7 +68,12 @@ const Dashboard = () => {
               </AspectRatio>
             </Flex>
 
-            <Collapse in={!isTrack} startingHeight={0}>
+            <Collapse
+              in={!isTrack}
+              endingHeight="3.5rem"
+              startingHeight={0}
+              unmountOnExit
+            >
               <ButtonGroup mt="1rem">
                 <Button
                   width="auto"
@@ -98,7 +103,12 @@ const Dashboard = () => {
                 {isPin ? <div>&#10003;</div> : <div>2</div>}
               </AspectRatio>
             </Flex>
-            <Collapse in={!isPin} startingHeight={0}>
+            <Collapse
+              in={!isPin}
+              endingHeight="3.5rem"
+              startingHeight={0}
+              unmountOnExit
+            >
               <ButtonGroup mt="1rem">
                 <Button
                   width="auto"
@@ -118,7 +128,7 @@ const Dashboard = () => {
         </VStack>
         {isTrack && isPin && (
           <Flex justifyContent="flex-end">
-            <NextLink href="/business">
+            <NextLink href="/customer">
               <Link color="gray.500">Next</Link>
             </NextLink>
           </Flex>
