@@ -1,9 +1,10 @@
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 import React from "react";
+import { theme } from "../theme";
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Flex
         flexDirection="column"
         alignItems="center"

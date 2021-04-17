@@ -8,21 +8,48 @@ import {
   Text,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
 
 const Login = () => {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const login = () => {
+    setIsLoading(true);
+    setTimeout(() => router.push("/business/dashboard"), 500);
+  };
   return (
     <>
-      <Heading>Welcome!</Heading>
-      <Text>Sign in to your business account to continue</Text>
+      <Heading color="oxford-blue.DEFAULT">Welcome!</Heading>
+      <Text mt="1rem" color="gray.500">
+        Sign in to your business account to continue
+      </Text>
       <Box width="full" as="form" mt="4.5rem">
         <FormControl>
-          <Input height="3.75rem" variant="flushed" placeholder="Email" />
+          <Input
+            type="text"
+            focusBorderColor="oxford-blue.DEFAULT"
+            height="3.75rem"
+            variant="flushed"
+            placeholder="Email"
+          />
         </FormControl>
         <FormControl>
-          <Input height="3.75rem" variant="flushed" placeholder="Password" />
+          <Input
+            type="password"
+            focusBorderColor="oxford-blue.DEFAULT"
+            height="3.75rem"
+            variant="flushed"
+            placeholder="Password"
+          />
         </FormControl>
-        <Button color="white" bgColor="blue.900" width="full" mt="10rem">
+        <Button
+          isLoading={isLoading}
+          onClick={login}
+          height="3.5rem"
+          colorScheme="oxford-blue"
+          mt="10rem"
+        >
           Sign In
         </Button>
       </Box>

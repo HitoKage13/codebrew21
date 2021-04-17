@@ -6,7 +6,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <Heading>Hello!</Heading>
+      <Heading color="oxford-blue.DEFAULT">Hello!</Heading>
       <AspectRatio width="70%" ratio={1}>
         <Image src="/Welcome.png" layout="fill" objectFit="cover" />
       </AspectRatio>
@@ -14,26 +14,12 @@ const Home = () => {
         Are you a business or customer?
       </Text>
       <Link href="/business/login">
-        <Button
-          mt="1rem"
-          bgColor="blue.900"
-          color="white"
-          height="3.5rem"
-          width="full"
-          borderRadius="0.875rem"
-        >
+        <Button mt="1rem" height="3.5rem" colorScheme="oxford-blue">
           I'm a business
         </Button>
       </Link>
       <Link href="/customer/login">
-        <Button
-          mt="1rem"
-          bgColor="blue.900"
-          color="white"
-          height="3.5rem"
-          width="full"
-          borderRadius="0.875rem"
-        >
+        <Button mt="1rem" height="3.5rem" colorScheme="oxford-blue">
           I'm a customer
         </Button>
       </Link>
