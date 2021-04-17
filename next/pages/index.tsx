@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Heading, Text } from "@chakra-ui/react";
+import { AspectRatio, Button, Heading, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +6,16 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <Heading color="oxford-blue.DEFAULT">Hello!</Heading>
+      <HStack spacing="1.25rem">
+        <Image
+          src="/logo.png"
+          width={35}
+          height={35}
+          objectFit="contain"
+          quality={100}
+        />
+        <Heading color="oxford-blue.DEFAULT">Hello!</Heading>
+      </HStack>
       <AspectRatio width="70%" ratio={1}>
         <Image src="/Welcome.png" layout="fill" objectFit="cover" />
       </AspectRatio>

@@ -28,6 +28,19 @@ export const theme = extendTheme({
       "800": "#1B286C",
       "900": "#111943",
     },
+    white: {
+      DEFAULT: "#FFFFFF",
+      "50": "#FFFFFF",
+      "100": "#FFFFFF",
+      "200": "#FFFFFF",
+      "300": "#FFFFFF",
+      "400": "#FFFFFF",
+      "500": "#FFFFFF",
+      "600": "#E6E6E6",
+      "700": "#CCCCCC",
+      "800": "#B3B3B3",
+      "900": "#999999",
+    },
   },
   components: {
     Button: {

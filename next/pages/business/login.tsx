@@ -3,10 +3,12 @@ import {
   Button,
   FormControl,
   Heading,
+  HStack,
   Input,
   Link,
   Text,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -20,7 +22,16 @@ const Login = () => {
   };
   return (
     <>
-      <Heading color="oxford-blue.DEFAULT">Welcome!</Heading>
+      <HStack spacing="1.25rem">
+        <Image
+          src="/logo.png"
+          width={35}
+          height={35}
+          objectFit="contain"
+          quality={100}
+        />
+        <Heading color="oxford-blue.DEFAULT">Welcome!</Heading>
+      </HStack>
       <Text mt="1rem" color="gray.500">
         Sign in to your business account to continue
       </Text>
