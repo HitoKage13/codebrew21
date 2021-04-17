@@ -11,14 +11,14 @@ import {
 } from "@chakra-ui/layout";
 import {
   Collapse,
-  FormControl,
-  Input,
   Modal,
   ModalBody,
   ModalContent,
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  PinInput,
+  PinInputField,
   useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -143,17 +143,28 @@ const Dashboard = () => {
             {modalContent === "track" ? "GPS Tracking" : "Quick Sign-in"}
           </ModalHeader>
           <ModalBody>
-            <FormControl>
-              <Input
-                placeholder={
-                  modalContent === "track" ? "Business ABN" : "Beacon ID"
-                }
-              />
-            </FormControl>
+            {modalContent === "track" ? (
+              <Text>
+                Please confirm that you would like to turn on GPS tracking
+              </Text>
+            ) : (
+              <>
+                <Text>Select a pin in to enable quick sign-on</Text>
+                <HStack as="form" justifyContent="center">
+                  <PinInput>
+                    <PinInputField />
+                    <PinInputField />
+                    <PinInputField />
+                    <PinInputField />
+                  </PinInput>
+                </HStack>
+              </>
+            )}
           </ModalBody>
           <ModalFooter>
             <ButtonGroup>
               <Button
+                type="submit"
                 color="indigo.DEFAULT"
                 onClick={onClose}
                 colorScheme="white"

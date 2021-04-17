@@ -144,8 +144,14 @@ const Dashboard = () => {
               : "Register your device as a beacon"}
           </ModalHeader>
           <ModalBody>
+            <Text>
+              {modalContent === "verify"
+                ? "Please provide your business ABN"
+                : "Please provide your device's Beacon ID"}
+            </Text>
             <FormControl>
               <Input
+                mt="0.5rem"
                 placeholder={
                   modalContent === "verify" ? "Business ABN" : "Beacon ID"
                 }

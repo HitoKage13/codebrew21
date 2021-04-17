@@ -9,10 +9,15 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
 import { Layout } from "../../components/layout";
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  const login = () => setTimeout(() => router.push("/customer/dashboard"), 500);
   return (
     <Layout layoutId="customer-login">
       <HStack spacing="1.25rem">
@@ -30,7 +35,15 @@ const Login = () => {
       </Text>
       <Box width="full" as="form" mt="4.5rem">
         <NextLink href="/customer/dashboard">
-          <Button colorScheme="oxford-blue" height="4rem">
+          <Button
+            isLoading={loading}
+            colorScheme="oxford-blue"
+            height="4rem"
+            onClick={() => {
+              setLoading(true);
+              login();
+            }}
+          >
             <Flex
               alignItems="center"
               justifyContent="center"

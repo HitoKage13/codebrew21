@@ -14,13 +14,14 @@ export const Layout = ({ layoutId, children }: Props) => (
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ x: 0, opacity: 0 }}
+    style={{ height: "100vh" }}
   >
     <Flex
       overflowY="auto"
+      minHeight="100vh"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      height="100vh"
       mx="auto"
       width="clamp(0%, 90vw, 400px)"
       p="1rem"
