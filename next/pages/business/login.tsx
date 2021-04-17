@@ -1,5 +1,11 @@
-import { Box, Text, VStack } from "@chakra-ui/layout";
-import { FormControl, Heading, Input } from "@chakra-ui/react";
+import {
+  Box,
+  FormControl,
+  Heading,
+  Input,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
 
 const Login = () => {
