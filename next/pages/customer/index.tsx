@@ -2,6 +2,7 @@ import { Box, Flex, Heading, HStack, Text, VStack } from "@chakra-ui/layout";
 import { AspectRatio, Collapse } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState } from "react";
+import CheckInLocation from "../../components/CheckInLocation";
 
 const history = [
   {
@@ -62,6 +63,7 @@ const Homepage = () => {
       <AspectRatio mx="auto" width="50%" ratio={1}>
         <Image src="/Location.png" layout="fill" objectFit="contain" />
       </AspectRatio>
+      {/* <CheckInLocation/> */}
       <HStack mt="1rem">
         <Text color="indigo.DEFAULT" fontWeight="600">
           HISTORY
