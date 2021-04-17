@@ -71,6 +71,7 @@ const Dashboard = () => {
             <Collapse in={!isVerified} startingHeight={0}>
               <ButtonGroup mt="1rem">
                 <Button
+                  width="full"
                   onClick={() => {
                     setModalContent("verify");
                     onOpen();
@@ -78,7 +79,7 @@ const Dashboard = () => {
                 >
                   Verify
                 </Button>
-                <Button colorScheme="white" color="gray.500">
+                <Button width="full" colorScheme="white" color="gray.500">
                   Learn More
                 </Button>
               </ButtonGroup>
@@ -100,6 +101,7 @@ const Dashboard = () => {
             <Collapse in={!isRegistered} startingHeight={0}>
               <ButtonGroup mt="1rem">
                 <Button
+                  width="full"
                   onClick={() => {
                     setModalContent("register");
                     onOpen();
@@ -107,7 +109,7 @@ const Dashboard = () => {
                 >
                   Register
                 </Button>
-                <Button colorScheme="white" color="gray.500">
+                <Button width="full" colorScheme="white" color="gray.500">
                   Learn More
                 </Button>
               </ButtonGroup>
