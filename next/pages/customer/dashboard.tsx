@@ -11,7 +11,7 @@ const Dashboard = () => {
         <Text color="#4E63D2">SETUP</Text>
         <Divider bg="#4E63D2" />
       </HStack>
-      <Box width="80%" mt="1rem">
+      <Box width="80%" mt="1rem" p="1.25rem" boxShadow="base">
         <Text mt="1.5rem">Allow permission for bluetooth and GPS tracking</Text>
         <Box borderRadius="50%" bg="#4E63D2" width="1.5rem" height="1.5rem">
           <Text color="white">1</Text>
@@ -23,7 +23,7 @@ const Dashboard = () => {
           <Button>Remind me later</Button>
         </ButtonGroup>
       </Box>
-      <Box mt="1rem">
+      <Box width="80%" mt="1rem" p="1.25rem" boxShadow="base">
         <Text mt="1.5rem">Add quick sign-in method</Text>
         <Box borderRadius="50%" bg="#4E63D2" width="1.5rem" height="1.5rem">
           <Text color="white">2</Text>
