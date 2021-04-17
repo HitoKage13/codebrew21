@@ -1,21 +1,14 @@
-import { ChakraProvider, Flex } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { AnimateSharedLayout } from "framer-motion";
 import React from "react";
 import { theme } from "../theme";
 
 const App = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={theme}>
-      <Flex
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        height="100vh"
-        mx="auto"
-        width="clamp(0%, 90vw, 400px)"
-        p="1rem"
-      >
+      <AnimateSharedLayout>
         <Component {...pageProps} />
-      </Flex>
+      </AnimateSharedLayout>
     </ChakraProvider>
   );
 };

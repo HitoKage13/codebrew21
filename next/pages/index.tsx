@@ -2,10 +2,11 @@ import { AspectRatio, Button, Heading, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Layout } from "../components/layout";
 
 const Home = () => {
   return (
-    <>
+    <Layout layoutId="index">
       <HStack spacing="1.25rem">
         <Image
           src="/logo.png"
@@ -32,7 +33,7 @@ const Home = () => {
           I'm a customer
         </Button>
       </Link>
-    </>
+    </Layout>
   );
 };
 

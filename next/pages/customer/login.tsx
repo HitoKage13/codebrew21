@@ -10,10 +10,11 @@ import {
 import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
+import { Layout } from "../../components/layout";
 
 const Login = () => {
   return (
-    <>
+    <Layout layoutId="customer-login">
       <HStack spacing="1.25rem">
         <Image
           src="/logo.png"
@@ -58,7 +59,7 @@ const Login = () => {
           <Link color="blue.500">Create Account</Link>
         </NextLink>
       </Text>
-    </>
+    </Layout>
   );
 };
 
