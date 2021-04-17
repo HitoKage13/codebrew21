@@ -1,9 +1,8 @@
 {
-  "name": "Next.JS Progressive Web App",
-  "short_name": "Next PWA",
-  "theme_color": "#ffffff",
-  "background_color": "#004740",
-  "display": "fullscreen",
+  "name": "Chekr",
+  "short_name": "Chekr",
+  "theme_color": "#384353",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
