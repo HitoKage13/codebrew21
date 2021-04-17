@@ -1,10 +1,10 @@
 import { Button, ButtonGroup } from "@chakra-ui/button";
-import { Box, Divider, Heading, HStack, Text, VStack } from "@chakra-ui/layout";
+import { Box, Divider, Heading, HStack, Text } from "@chakra-ui/layout";
 import React from "react";
 
 const Dashboard = () => {
   return (
-    <VStack>
+    <Box>
       <Text>Account Details</Text>
       <Heading>Welcome!</Heading>
       <HStack>
@@ -25,7 +25,7 @@ const Dashboard = () => {
           <Button>Learn More</Button>
         </ButtonGroup>
       </Box>
-    </VStack>
+    </Box>
   );
 };
 

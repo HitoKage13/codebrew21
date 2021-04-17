@@ -1,28 +1,38 @@
 import {
   Box,
+  Button,
   FormControl,
   Heading,
   Input,
+  Link,
   Text,
-  VStack,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import React from "react";
 
 const Login = () => {
   return (
-    <VStack>
+    <>
       <Heading>Welcome!</Heading>
       <Text>Sign in to your business account to continue</Text>
-      <Box as="form">
+      <Box width="full" as="form" mt="4.5rem">
         <FormControl>
-          <Input placeholder="Email" />
+          <Input height="3.75rem" variant="flushed" placeholder="Email" />
         </FormControl>
         <FormControl>
-          <Input placeholder="Password" />
+          <Input height="3.75rem" variant="flushed" placeholder="Password" />
         </FormControl>
-        <Text>Don't have an account? Create Account</Text>
+        <Button color="white" bgColor="blue.900" width="full" mt="10rem">
+          Sign In
+        </Button>
       </Box>
-    </VStack>
+      <Text mt="2.25rem" color="gray.500">
+        Don't have an account?{" "}
+        <NextLink href="/business/create" passHref>
+          <Link color="blue.500">Create Account</Link>
+        </NextLink>
+      </Text>
+    </>
   );
 };
 

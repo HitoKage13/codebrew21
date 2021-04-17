@@ -1,16 +1,43 @@
-import { Button, Heading, Text, VStack } from "@chakra-ui/react";
+import { AspectRatio, Button, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Home = () => {
   return (
-    <VStack>
+    <>
       <Heading>Hello!</Heading>
-      <Image src="/Welcome.png" width={200} height={200} />
-      <Text>Are you a business or customer?</Text>
-      <Button>I'm a business</Button>
-      <Button>I'm a customer</Button>
-    </VStack>
+      <AspectRatio width="70%" ratio={1}>
+        <Image src="/Welcome.png" layout="fill" objectFit="cover" />
+      </AspectRatio>
+      <Text mt="2rem" color="gray.500">
+        Are you a business or customer?
+      </Text>
+      <Link href="/business/login">
+        <Button
+          mt="1rem"
+          bgColor="blue.900"
+          color="white"
+          height="3.5rem"
+          width="full"
+          borderRadius="0.875rem"
+        >
+          I'm a business
+        </Button>
+      </Link>
+      <Link href="/customer/login">
+        <Button
+          mt="1rem"
+          bgColor="blue.900"
+          color="white"
+          height="3.5rem"
+          width="full"
+          borderRadius="0.875rem"
+        >
+          I'm a customer
+        </Button>
+      </Link>
+    </>
   );
 };
 
