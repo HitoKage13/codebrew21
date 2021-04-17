@@ -1,35 +1,32 @@
 import {Button} from "@chakra-ui/button";
-import {Heading, Text, VStack} from "@chakra-ui/layout";
+import {Heading, Text} from "@chakra-ui/layout";
 import Image from "next/image";
 import React from "react";
-import styled from "@emotion/styled";
-
-const ImageDivider = styled.div`
-  position: static;
-  width: 81px;
-  height: 44px;
-  left: 16px;
-  top: 12px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 8px;
-  background-color: white;
-`
+import {Box, Link} from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Login = () => {
   return (
     <>
-      <VStack>
-        <Heading>Welcome!</Heading>
-        <Text>Sign up with your Service NSW account to continue</Text>
-        <Button style={{ width: '331px', height: '68px', backgroundColor: '#3372D3', color: 'white' }}>
-          <ImageDivider>
-            <Image src="/ServiceNSW.png" width={74} height={27} />
-          </ImageDivider>
+      <Heading>
+        <Image src="/ChecknLogo.png" width={35} height={35} />
+        Welcome!
+      </Heading>
+      <Text mt="2.25rem" color="gray.500">Sign in to your business account to continue</Text>
+      <Box width="full" as="form" mt="4.5rem">
+        <Button color="white" bgColor="blue.900" width="full" mt="10rem">
+          <Box width="84px" height="30px" bg="white">
+            <Image src="/ServiceNSW.png" width={74} height={27} objectFit="contain" objectPosition="center" />
+          </Box>
           Continue with Service NSW
         </Button>
-      </VStack>
+      </Box>
+      <Text mt="2.25rem" color="gray.500">
+        Don't have an account?{" "}
+        <NextLink href="/business/create" passHref>
+          <Link color="blue.500">Create Account</Link>
+        </NextLink>
+      </Text>
     </>
   );
 };
