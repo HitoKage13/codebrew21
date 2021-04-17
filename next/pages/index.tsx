@@ -1,17 +1,11 @@
-import { AspectRatio, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { AspectRatio, Button, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Home = () => {
   return (
-    <Flex
-      flexDirection="column"
-      alignItems="center"
-      mx="auto"
-      width="clamp(0%, 90vw, 400px)"
-      p="1rem"
-    >
+    <>
       <Heading>Hello!</Heading>
       <AspectRatio width="70%" ratio={1}>
         <Image src="/Welcome.png" layout="fill" objectFit="cover" />
@@ -43,7 +37,7 @@ const Home = () => {
           I'm a customer
         </Button>
       </Link>
-    </Flex>
+    </>
   );
 };
 

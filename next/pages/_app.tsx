@@ -9,6 +9,9 @@ const App = ({ Component, pageProps }) => {
         alignItems="center"
         justifyContent="center"
         height="100vh"
+        mx="auto"
+        width="clamp(0%, 90vw, 400px)"
+        p="1rem"
       >
         <Component {...pageProps} />
       </Flex>

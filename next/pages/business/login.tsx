@@ -1,16 +1,9 @@
-import {
-  Box,
-  FormControl,
-  Heading,
-  Input,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, FormControl, Heading, Input, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Login = () => {
   return (
-    <VStack>
+    <Box>
       <Heading>Welcome!</Heading>
       <Text>Sign in to your business account to continue</Text>
       <Box as="form">
@@ -22,7 +15,7 @@ const Login = () => {
         </FormControl>
         <Text>Don't have an account? Create Account</Text>
       </Box>
-    </VStack>
+    </Box>
   );
 };
 
