@@ -24,6 +24,7 @@ import {
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useState } from "react";
+import { Layout } from "../../components/layout";
 
 const Dashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,7 +35,7 @@ const Dashboard = () => {
   const [isRegistered, setIsRegistered] = useState(false);
 
   return (
-    <>
+    <Layout layoutId="business-dashboard">
       <Box width="full">
         <Text color="gray.500">Account Details</Text>
         <Flex justifyContent="space-between" alignItems="center">
@@ -176,7 +177,7 @@ const Dashboard = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Layout>
   );
 };
 

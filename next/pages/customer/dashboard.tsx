@@ -24,6 +24,7 @@ import {
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useState } from "react";
+import { Layout } from "../../components/layout";
 
 const Dashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -32,7 +33,7 @@ const Dashboard = () => {
   const [isPin, setIsPin] = useState(false);
 
   return (
-    <>
+    <Layout layoutId="customer-dashboard">
       <Box width="full">
         <Text color="gray.500">Account Details</Text>
         <Flex justifyContent="space-between" alignItems="center">
@@ -53,11 +54,12 @@ const Dashboard = () => {
         </HStack>
         <VStack spacing="1rem" mt="1rem" height="clamp(360px, 80vh, 520px)">
           <Box p="1.25rem" width="full" boxShadow="base">
-            <Flex alignItems="center" justifyContent="space-between">
+            <Flex alignItems="flex-start" justifyContent="space-between">
               <Text fontWeight="600">
                 Allow permission for bluetooth and GPS tracking
               </Text>
               <AspectRatio
+                mt="0.25rem"
                 ratio={1}
                 width="1.5rem"
                 bgColor="indigo.DEFAULT"
@@ -172,7 +174,7 @@ const Dashboard = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Layout>
   );
 };
 

@@ -12,6 +12,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { Layout } from "../../components/layout";
 
 const Login = () => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const Login = () => {
     setTimeout(() => router.push("/business/dashboard"), 500);
   };
   return (
-    <>
+    <Layout layoutId="business-login">
       <HStack spacing="1.25rem">
         <Image
           src="/logo.png"
@@ -70,7 +71,7 @@ const Login = () => {
           <Link color="blue.500">Create Account</Link>
         </NextLink>
       </Text>
-    </>
+    </Layout>
   );
 };
 
