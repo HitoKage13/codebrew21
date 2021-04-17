@@ -23,7 +23,7 @@ const Login = () => {
       </Box>
       <Text mt="2.25rem" color="gray.500">
         Don't have an account?{" "}
-        <NextLink href="/business/create" passHref>
+        <NextLink href="/customer/dashboard" passHref>
           <Link color="blue.500">Create Account</Link>
         </NextLink>
       </Text>
