@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <VStack>
         <Heading>Hello!</Heading>
-        <Image src="./Welcome.png" width={200} height={200} />
+        <Image src="/Welcome.png" width={200} height={200} />
         <Text>Are you a business or customer?</Text>
         <Button>I'm a business</Button>
         <Button>I'm a customer</Button>
